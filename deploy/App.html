@@ -169,17 +169,16 @@
                 _getFillColor: function(age) {
                     var color = 'white';
                     if ( age !== undefined ) {
-                        if ( age < 14 ) {
+                        if ( age < 30 ) {
                             var percentage_through = 1 - ( (14-age)/14 ) ;
                             
                             var green =  parseInt(255 - (100*percentage_through), 10) ;
                             var blue = parseInt(percentage_through*100,10);
                             color = 'rgb(0,' + green + ',' + blue + ')';
-                        } else if ( age < 42) {
-                            var blue = parseInt(((42-age)/28) * 255, 10) ;
-                            var red = parseInt(255*age/42,10);
+                        } else if ( age < 60) {
+                            var blue = parseInt(((60-age)/28) * 255, 10) ;
+                            var red = parseInt(255*age/60,10);
                             color = 'rgb('+red+',0,'+blue+')';
-                            
                         } else {
                             color = 'red';
                         }
